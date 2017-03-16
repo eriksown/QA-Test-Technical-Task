@@ -6,6 +6,6 @@
 1. Download .rar File (executable tests.rar)
 2. Extract to see the .jar file (TestSuiteOne.jar)
 3. Open command prompt
-4. Go to the directory where the downloaded .jar file has been saved
-5. Run the .jar file by typing "java -jar"
+4. Go to the directory where the downloaded .jar file has been saved and extracted
+5. Run the .jar file by typing "java -jar TestSuiteOne.jar"
 
