@@ -13,13 +13,15 @@ public class TestSuiteOne {
 		
 		System.out.println("**** Initiating Test Run ****");
 		
-		//WebDriver driver = new FirefoxDriver();
-
+		//Path of installed Firefox
 		File pathToBinary = new File("C:\\Users\\kierson.vigilla\\AppData\\Local\\Mozilla Firefox\\firefox.exe");
 		FirefoxBinary ffBinary = new FirefoxBinary(pathToBinary);
-		FirefoxProfile firefoxProfile = new FirefoxProfile();       
-		WebDriver driver = new FirefoxDriver(ffBinary,firefoxProfile);
+		FirefoxProfile firefoxProfile = new FirefoxProfile();
+
+		//Path of gecko driver
+		System.setProperty ("webdriver.gecko.driver","C:\\Program Files\\Java\\jdk-20\\bin\\geckodriver.exe");
 		
+		WebDriver driver = new FirefoxDriver(ffBinary,firefoxProfile);		
 		driver.manage().window().maximize();
 		
 		driver.get("https://www.amaysim.com.au/help/manage-account");		
