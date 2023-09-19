@@ -13,7 +13,13 @@ public class TestSuiteOne {
 		
 		System.out.println("**** Initiating Test Run ****");
 		
-		WebDriver driver = new FirefoxDriver();
+		//WebDriver driver = new FirefoxDriver();
+
+		File pathToBinary = new File("C:\\Users\\kierson.vigilla\\AppData\\Local\\Mozilla Firefox\\firefox.exe");
+		FirefoxBinary ffBinary = new FirefoxBinary(pathToBinary);
+		FirefoxProfile firefoxProfile = new FirefoxProfile();       
+		WebDriver driver = new FirefoxDriver(ffBinary,firefoxProfile);
+		
 		driver.manage().window().maximize();
 		
 		driver.get("https://www.amaysim.com.au/help/manage-account");		
